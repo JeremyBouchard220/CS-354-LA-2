@@ -16,14 +16,14 @@ Object subclass: Bank [
     ]
 
     accrue: rate [
-        accounts do [
+        accounts do: [
             :test | test accrue: rate
         ]
     ]
 
     toString [
         |r| r:= ''.
-        accounts do [
+        accounts do: [
             :test | r:=r, test toString, (Character nl asString)
         ].
         ^ r
