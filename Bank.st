@@ -30,10 +30,11 @@ Object subclass: Bank [
     ]
 ]
 
-|Bank| Bank:=Bank new.
-|Customer| Customer:=Customer new: 'Jeremy'.
-Bank add: (CheckingAccount new: '01001' cust: Customer bal: 100.00).
-Bank add: (SavingsAccount new: '01002' cust: Customer bal: 200.00).
-Bank accrue: 0.02.
-Bank toString.
-printNl.
+|bank| bank:=Bank new.
+|customer| customer:=Customer new: 'Jeremy'.
+|checking| checking:=CheckingAccount new: '01001' cust: customer bal: 100.00.
+bank add: checking.
+|savings| savings:=SavingsAccount new: '01002' cust: customer bal: 200.00.
+bank add: savings.
+bank accrue: 0.02.
+(bank toString) printNl.

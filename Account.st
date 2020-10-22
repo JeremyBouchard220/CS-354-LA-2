@@ -30,6 +30,6 @@ Object subclass: Account [
     ]
 
     toString [
-        ^ num, ':', cust toString, ':', bal asString
+        ^ num , ':' , (cust toString) , ':' , (bal asString)
     ]
 ]
